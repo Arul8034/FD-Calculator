@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fd calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>FD Intrest Calculator</h2>
+        
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Enter a Months">
+        </div>
+        <div>
+            <button type="submit" onclick="calculate()">Calculate Intrest</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    
+
+    <script>
+        function calculate(){
+            const month = Number(document.getElementById("input").value);
+            //Number(code  .value ) is important for this calculator
+            let rate =0;
+            if(month <3)
+                rate =5.3;
+            
+            else if(month >=3 && month <=6)
+                rate =5.9;
+            
+            else if(month >=7 && month <=9)
+                rate =6.5;
+            
+            else
+             rate = 7;
+
+            let result = document.getElementById("result");
+            result.innerHTML = "intrest rate in "+rate 
+
+
+        }
+
+      /*  let name = prompt("Enter your name ");
+        console.log(name);
+        let tickets = prompt("How many tickets do you want ?")
+        console.log("You shought pay "+Number(tickets*20));
+        let a= prompt("Enter a number");
+        console.log(Number(a)+20);
+        let number = Math.round(3.3);
+        console.log(number);
+        number =Math.round(4.7);
+        console.log(number);
+        number = Math.floor(3.9);
+        console.log(number);
+        number =Math.ceil(8.1);
+        console.log(number);
+        number =Math.sqrt(81);
+        console.log(number);
+        number =Math.abs(-29);
+        console.log(number);
+        number =Math.min(23,32,55,93);
+        console.log(number);
+        number =Math.max(23,43,53,54);
+        console.log(number);
+
+        number  = Math.floor(Math.random()*6)+1
+        console.log(number);
+
+        number = Math.floor(Math.random()*100)+1
+        console.log(number);
+           
+           let str1 = "Strive not to be a success, ";
+           let str2 = "but rather to be a value";
+        let after = str1.slice(4,10)
+        console.log(after);
+        after = str2.slice(4,10);
+        console.log(after);
+        after = str1.substr(7,7);
+        console.log(after);
+        ater = str1.substring(7,19);
+        console.log(ater);
+        let replace = str1.replace("Strive","Aim");
+        console.log(replace);
+        let trim =str1.trim();
+        console.log(trim);
+        let trimStart = str2.trimStart();
+        console.log(trimStart);
+        let trimEnd = str1.trimEnd();
+        console.log(trimEnd);
+        let search = str1.search("not");
+        console.log(search);
+        let includes =str1.includes("success");
+        console.log(includes);
+        includes = str2.includes("Aim");
+        console.log(includes);
+        index = str1.indexOf("t");
+        console.log(index);
+        index = str2.lastIndexOf("a");
+        console.log(index); */
+
+
+
+        
+
+    </script>
+</body>
+</html>
